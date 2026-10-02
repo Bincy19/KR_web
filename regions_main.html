@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore By Regions</title>
+</head>
+<body>
+    <h1>Explore By Regions</h1>
+
+    {% for region in regions_data %}
+        <div>
+            <h2><a href="{{ url_for('show_region', region_name=region['label'].lower().replace(' ', '_')) }}">{{ region['label'] }}</a></h2>
+            <h3>Geography</h3>
+            <p>{{ region['description'] }}</p>
+            <h3>Culture</h3>
+            <p>{{ region['cultureDescription'] }}</p>
+            <img src="{{ region['image'] }}" alt="{{ region['label'] }} Image" style="max-width: 500px;">
+        </div>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontology Data</title>
+</head>
+<body>
+    <h1>{{ label }}</h1>
+    <p>{{ description }}</p>
+    <img src="{{ image }}" alt="Country Image">
+    <p>Country Code: {{ countryCode }}</p>
+    <p>Currency: {{ currency }}</p>
+    <p>Time Zone: {{ timeZone }}</p>
+
+    <!-- Add buttons linking to the three pages -->
+    <a href="{{ url_for('regions_main') }}"><button>Explore By Regions</button></a>
+    <a href="{{ url_for('destinations') }}"><button>Explore By Destinations</button></a>
+    <a href="{{ url_for('attraction') }}"><button>Explore By Attractions</button></a>
+</body>
+</html>
